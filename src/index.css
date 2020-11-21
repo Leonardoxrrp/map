@@ -1,5 +1,6 @@
-body {
+body, html {
   margin: 0;
+  font-family: consolas;  
 }
 
 .map {
@@ -7,6 +8,13 @@ body {
   height: 100vh;
 }
 .location-icon {
-  font-size: 2rem;
+  font-size: 1rem;
   color: red;
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
