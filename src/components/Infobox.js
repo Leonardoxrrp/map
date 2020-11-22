@@ -1,16 +1,8 @@
+function Infobox({ info, infoDataClicked, onClick}) {
 
-import { useState } from "react"
-import LocationMarker from "./LocationMarker"
-function Infobox({ info, infoDataClicked }) {
-
-    const [closeInfo, setCloseInfo] = useState(false)
-
-    const windowHandler = () => {
-        setCloseInfo(true)
-    }
     return (
         <div>
-            {infoDataClicked && !closeInfo ?
+            {infoDataClicked ?
                 <div className="infoBox">
                     <h1>Details</h1>
                     <p><span><strong>Type: </strong></span>{info.categoryTitle}</p>
@@ -25,7 +17,7 @@ function Infobox({ info, infoDataClicked }) {
                     </a>
                     </p>
 
-                    <div className="xContainer" onClick={() => windowHandler()}>
+                    <div className="xContainer" onClick={() => onClick(false)}>
                         <p>X</p>
                     </div>
                 </div>
