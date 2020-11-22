@@ -1,12 +1,12 @@
 import {Icon} from "@iconify/react"
 import locationIcon from "@iconify/icons-mdi/fire-alert"
 
-function LocationMarket({onClick}) {
+function WildFire({onClick}) {
     return (
-        <div className="location-marker" onClick={onClick}>
+        <div className="location-marker" onClick={() => onClick()}>
             <Icon icon={locationIcon} className="location-icon" />
         </div>
     )
 }
 
-export default LocationMarket
+export default WildFire

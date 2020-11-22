@@ -1,5 +1,5 @@
 import GoogleMapReact from "google-map-react"
-import LocationMarker from "./LocationMarker"
+import WildFire from "./WildFire"
 import {useState} from "react"
 import InfoBox from "./Infobox"
 
@@ -15,7 +15,7 @@ function Map({eventData, center, zoom}) {
 
     const markers = eventData.map(ev=> {
         if (ev.categories[0].id === 8) {
-            return  <LocationMarker lat = {ev.geometries[0].coordinates[1] }  lng={ev.geometries[0].coordinates[0]} onClick={()=> {
+            return  <WildFire lat = {ev.geometries[0].coordinates[1] }  lng={ev.geometries[0].coordinates[0]} onClick={()=> {
                 setInfoData({id: ev.id, title: ev.title, categoryTitle: ev.categories[0].title, source: ev.sources[0].url})
                 setInfoDataClicked(true)
             }}  />
