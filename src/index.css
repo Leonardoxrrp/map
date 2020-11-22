@@ -11,6 +11,13 @@ body, html {
 .location-icon {
   font-size: 1rem;
   color: red;
+  cursor: pointer
+}
+.location-icon:hover {
+  font-size: 1.5rem;
+}
+.location-icon:visted {
+  color: black;
 }
 .spinner {
   display: flex;
@@ -19,9 +26,7 @@ body, html {
   min-height: 100vh;
   flex-direction: column;
 }
-.location-marker {
-  cursor: pointer
-}
+
 .infoBox {
   font-size: 1rem;
   color: white;

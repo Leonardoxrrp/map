@@ -1,4 +1,4 @@
-function Infobox({ info, infoDataClicked, onClick}) {
+function Infobox({ info, infoDataClicked, onClick }) {
 
     return (
         <div>
