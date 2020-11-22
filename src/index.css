@@ -34,3 +34,23 @@ body, html {
   top: 0;
   left: 0;
 }
+
+.sourceURL {
+  color: white;
+}
+
+.xContainer {
+  cursor:pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 0px 0px 0px 10px;
+  position: absolute;
+  top:0;
+  right:0;
+  color: black;
+
+}

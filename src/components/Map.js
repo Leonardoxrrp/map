@@ -7,11 +7,13 @@ const { REACT_APP_APIMAP } = process.env;
 
 function Map({eventData, center, zoom}) {
     const [infoData, setInfoData] = useState(null)
+    const [infoDataClicked, setInfoDataClicked] = useState(false)
 
     const markers = eventData.map(ev=> {
         if (ev.categories[0].id === 8) {
             return  <LocationMarker lat = {ev.geometries[0].coordinates[1] }  lng={ev.geometries[0].coordinates[0]} onClick={()=> {
-                setInfoData({id: ev.id, title: ev.title, categoryTitle: ev.categories[0].title})
+                setInfoData({id: ev.id, title: ev.title, categoryTitle: ev.categories[0].title, source: ev.sources[0].url})
+                setInfoDataClicked(true)
             }}  />
         }
         return null
@@ -26,7 +28,7 @@ function Map({eventData, center, zoom}) {
                {markers}
             </GoogleMapReact>
 
-            {infoData && <InfoBox info={infoData}/>}
+            {infoData && <InfoBox info={infoData} infoDataClicked={infoDataClicked}/>}
         </div>
     )
 }
